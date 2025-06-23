@@ -1,41 +1,96 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MIRROR — Liberarium</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <h1>Mirror: Lo que acecha tras el reflejo</h1>
-    <nav>
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#libro">El Libro</a></li>
-        <li><a href="#personajes">Personajes</a></li>
-        <li><a href="#tienda">Tienda</a></li>
-        <li><a href="#blog">Blog</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section id="inicio" class="hero">
-      <h2>Una historia oscura, profunda e inolvidable</h2>
-      <p>¿Estás preparada para cruzar el espejo?</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MIRROR: Lo que acecha tras el reflejo</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #0a0a0a;
+        color: #ffffff;
+        overflow-x: hidden;
+      }
+
+      header {
+        background-color: #1a1a1a;
+        padding: 1.5rem 2rem;
+        text-align: center;
+        border-bottom: 1px solid #3a0c4f;
+
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+        color: #a36aff;
+        letter-spacing: 1px;
+      }
+
+      .hero {
+        background: url('hero-image.jpg') center/cover no-repeat;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0 2rem;
+      }
+
+      .hero h2 {
+        font-size: 2.5rem;
+        color: #ffffff;
+        text-shadow: 0 0 15px #6e3b95;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        color: #cccccc;
+        max-width: 600px;
+      }
+
+      .btn-primary {
+        background-color: #6e3b95;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 5px;
+        margin-top: 1rem;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .btn-primary:hover {
+        background-color: #8c50bd;
+      }
+
+      footer {
+        background-color: #1a1a1a;
+        color: #888;
+        text-align: center;
+        padding: 1rem;
+        font-size: 0.9rem;
+        border-top: 1px solid #3a0c4f;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>MIRROR</h1>
+    </header>
+
+    <section class="hero">
+      <h2>Lo que acecha tras el reflejo</h2>
+      <p>Una novela de suspense psicológico, realismo forense y oscuridad onírica.</p>
+      <button class="btn-primary">Descúbrela ahora</button>
     </section>
-    <section id="libro">
-      <h2>Sobre el libro</h2>
-      <p>“Mirror” es una novela de thriller psicológico, horror forense y simbolismo oscuro que te atrapará desde la primera página.</p>
-    </section>
-    <section id="personajes">
-      <h2>Conoce a Mila</h2>
-      <img src="Mila.jpeg" alt="Mila" />
-      <p>Fuerza, carisma y un pasado imposible de olvidar.</p>
-    </section>
-  </main>
-  <footer>
-    <p>&copy; 2025 Mirror: Liberarium</p>
-  </footer>
-</body>
+
+    <footer>
+      © 2025 Mirror Inc. Todos los derechos reservados.
+    </footer>
+  </body>
 </html>
