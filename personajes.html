@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personajes | Mirror</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      background-color: #0a0a0a;
+      color: #ffffff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .section-title {
+      text-align: center;
+      padding: 2rem;
+      font-size: 2.5rem;
+      color: #a36aff;
+      border-bottom: 1px solid #3a0c4f;
+    }
+
+    .characters-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .character-card {
+      background-color: #1a1a1a;
+      border: 1px solid #3a0c4f;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(163, 106, 255, 0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .character-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 30px rgba(163, 106, 255, 0.4);
+    }
+
+    .character-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .character-card h3 {
+      margin: 1rem;
+      color: #a36aff;
+    }
+
+    .character-card p {
+      margin: 0 1rem 1rem;
+      font-size: 0.95rem;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="section-title">Personajes</h1>
+
+  <div class="characters-container">
+    <div class="character-card">
+      <img src="img/mila.jpg" alt="Mila" />
+      <h3>Mila</h3>
+      <p>Joven de 21 años, rusa, marcada por el pasado, con tatuajes de tentáculos recorriendo su cuerpo. Fuerte, letal, carismática.</p>
+    </div>
+    <div class="character-card">
+      <img src="img/jaime.jpg" alt="Jaime" />
+      <h3>Jaime</h3>
+      <p>Socarrón y leal, exmilitar con pasado turbio. Sabe que el infierno tiene precio y lo paga con ironía.</p>
+    </div>
+    <div class="character-card">
+      <img src="img/andrea.jpg" alt="Andrea" />
+      <h3>Andrea</h3>
+      <p>Forense brillante. Inteligente, racional y contenida. Lo paranormal la incomoda, pero no la frena.</p>
+    </div>
+    <div class="character-card">
+      <img src="img/clara.jpg" alt="Clara" />
+      <h3>Clara</h3>
+      <p>Hermana de Alicia. Frágil, emocional, desgarrada por la pérdida. El dolor la convierte en peligrosa.</p>
+    </div>
+    <div class="character-card">
+      <img src="img/veinte.jpg" alt="Veinte" />
+      <h3>Veinte</h3>
+      <p>Encarnación de lo oscuro. Elegante, letal, seductora. Diabla vestida de arte barroco.</p>
+    </div>
+  </div>
+
+</body>
+</html>
