@@ -1,96 +1,157 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MIRROR: Lo que acecha tras el reflejo</title>
-    <link rel="stylesheet" href="styles.css" />
-    <style>
-      body {
-        margin: 0;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #0a0a0a;
-        color: #ffffff;
-        overflow-x: hidden;
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MIRROR: Lo que acecha tras el reflejo</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0a0a0a;
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #1a1a1a;
+      padding: 1.5rem 2rem;
+      text-align: center;
+      border-bottom: 1px solid #3a0c4f;
+      position: relative;
+      z-index: 10;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #a36aff;
+      letter-spacing: 1px;
+    }
+
+    .hero {
+      position: relative;
+      background: url('hero-image.jpg') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 2rem;
+      overflow: hidden;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      color: #ffffff;
+      text-shadow: 0 0 25px #6e3b95;
+      z-index: 2;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #cccccc;
+      max-width: 600px;
+      z-index: 2;
+    }
+
+    .btn-primary {
+      background-color: #6e3b95;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      margin-top: 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      z-index: 2;
+    }
+
+    .btn-primary:hover {
+      background-color: #8c50bd;
+      transform: scale(1.05);
+    }
+
+    .glass-fragment {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(174, 139, 255, 0.2);
+      backdrop-filter: blur(3px);
+      border-radius: 2px;
+      animation: floatFragment 10s linear infinite;
+      z-index: 1;
+    }
+
+    .glass-fragment:nth-child(1) {
+      top: 10%;
+      left: 15%;
+      animation-delay: 0s;
+    }
+
+    .glass-fragment:nth-child(2) {
+      top: 40%;
+      left: 80%;
+      animation-delay: 2s;
+    }
+
+    .glass-fragment:nth-child(3) {
+      top: 70%;
+      left: 30%;
+      animation-delay: 4s;
+    }
+
+    @keyframes floatFragment {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.4;
       }
-
-      header {
-        background-color: #1a1a1a;
-        padding: 1.5rem 2rem;
-        text-align: center;
-        border-bottom: 1px solid #3a0c4f;
-
+      50% {
+        transform: translateY(-30px) rotate(180deg);
+        opacity: 0.7;
       }
-
-      header h1 {
-        margin: 0;
-        font-size: 2.5rem;
-        color: #a36aff;
-        letter-spacing: 1px;
+      100% {
+        transform: translateY(0) rotate(360deg);
+        opacity: 0.4;
       }
+    }
 
-      .hero {
-        background: url('hero-image.jpg') center/cover no-repeat;
-        height: 80vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 0 2rem;
-      }
+    footer {
+      background-color: #1a1a1a;
+      color: #888;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      border-top: 1px solid #3a0c4f;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MIRROR</h1>
+  </header>
 
-      .hero h2 {
-        font-size: 2.5rem;
-        color: #ffffff;
-        text-shadow: 0 0 15px #6e3b95;
-      }
+  <section class="hero">
+    <div class="glass-fragment"></div>
+    <div class="glass-fragment"></div>
+    <div class="glass-fragment"></div>
+    <h2>Lo que acecha tras el reflejo</h2>
+    <p>Una novela de suspense psicológico, realismo forense y oscuridad onírica.</p>
+    <button class="btn-primary">Descúbrela ahora</button>
+  </section>
 
-      .hero p {
-        font-size: 1.2rem;
-        color: #cccccc;
-        max-width: 600px;
-      }
-
-      .btn-primary {
-        background-color: #6e3b95;
-        color: white;
-        padding: 0.75rem 1.5rem;
-        border: none;
-        border-radius: 5px;
-        margin-top: 1rem;
-        font-size: 1rem;
-        cursor: pointer;
-        transition: background-color 0.3s;
-      }
-
-      .btn-primary:hover {
-        background-color: #8c50bd;
-      }
-
-      footer {
-        background-color: #1a1a1a;
-        color: #888;
-        text-align: center;
-        padding: 1rem;
-        font-size: 0.9rem;
-        border-top: 1px solid #3a0c4f;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>MIRROR: Lo que acecha tras el reflejo</h1>
-    </header>
-
-    <section class="hero">
-      <h2>Lo que acecha tras el reflejo</h2>
-      <p>Una novela de suspense psicológico, realismo forense y oscuridad onírica.</p>
-      <button class="btn-primary">Descúbrela ahora</button>
-    </section>
-
-    <footer>
-      © 2025 Mirror Inc. Todos los derechos reservados.
-    </footer>
-  </body>
+  <footer>
+    © 2025 Mirror Inc. Todos los derechos reservados.
+  </footer>
+</body>
 </html>
+
