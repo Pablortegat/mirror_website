@@ -12,49 +12,6 @@
         background-color: #0a0a0a;
         color: #ffffff;
         overflow-x: hidden;
-        display: flex;
-      }
-
-      /* Menú lateral */
-      nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100vh;
-        width: 240px;
-        background-color: #111;
-        border-right: 1px solid #3a0c4f;
-        padding-top: 2rem;
-        z-index: 1000;
-      }
-
-      nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-
-      nav ul li {
-        margin: 1.5rem 0;
-      }
-
-      nav ul li a {
-        color: #a36aff;
-        text-decoration: none;
-        font-size: 1.1rem;
-        padding: 0.5rem 1rem;
-        display: block;
-        transition: background 0.3s;
-      }
-
-      nav ul li a:hover {
-        background-color: #3a0c4f44;
-        border-left: 4px solid #a36aff;
-      }
-
-      main {
-        margin-left: 240px;
-        width: calc(100% - 240px);
       }
 
       header {
@@ -71,6 +28,36 @@
         letter-spacing: 1px;
       }
 
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 100%;
+        background-color: #111;
+        border-right: 1px solid #3a0c4f;
+        padding-top: 4rem;
+        z-index: 1000;
+      }
+
+      nav a {
+        display: block;
+        color: #ccc;
+        padding: 1rem;
+        text-decoration: none;
+        transition: background 0.3s;
+      }
+
+      nav a:hover {
+        background-color: #2a003f;
+        color: #fff;
+      }
+
+      .content {
+        margin-left: 200px;
+        padding: 2rem;
+      }
+
       .hero {
         background: url('hero-image.jpg') center/cover no-repeat;
         height: 80vh;
@@ -81,17 +68,6 @@
         text-align: center;
         padding: 0 2rem;
         animation: fadeIn 2s ease-in-out;
-      }
-
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
       }
 
       .hero h2 {
@@ -115,12 +91,11 @@
         margin-top: 1rem;
         font-size: 1rem;
         cursor: pointer;
-        transition: background-color 0.3s, transform 0.3s;
+        transition: background-color 0.3s;
       }
 
       .btn-primary:hover {
         background-color: #8c50bd;
-        transform: scale(1.05);
       }
 
       footer {
@@ -131,20 +106,25 @@
         font-size: 0.9rem;
         border-top: 1px solid #3a0c4f;
       }
+
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
     </style>
   </head>
   <body>
     <nav>
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#libro">El Libro</a></li>
-        <li><a href="#personajes">Personajes</a></li>
-        <li><a href="#tienda">Tienda</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
+      <a href="#inicio">Inicio</a>
+      <a href="libro.html">El Libro</a>
+      <a href="personajes.html">Personajes</a>
+      <a href="tienda.html">Tienda</a>
+      <a href="blog.html">Blog</a>
+      <a href="notas.html">Notas de la Autora</a>
+      <a href="contacto.html">Contacto</a>
     </nav>
-    <main>
+
+    <div class="content">
       <header>
         <h1>MIRROR</h1>
       </header>
@@ -158,6 +138,6 @@
       <footer>
         © 2025 Mirror Inc. Todos los derechos reservados.
       </footer>
-    </main>
+    </div>
   </body>
 </html>
