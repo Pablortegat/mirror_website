@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notas de Autor - MIRROR</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #0a0a0a;
+        color: #ffffff;
+        overflow-x: hidden;
+      }
+
+      header {
+        background-color: #1a1a1a;
+        padding: 1.5rem 2rem;
+        text-align: center;
+        border-bottom: 1px solid #3a0c4f;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+        color: #a36aff;
+        letter-spacing: 1px;
+      }
+
+      main {
+        padding: 2rem;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .note {
+        border: 1px solid #3a0c4f;
+        border-radius: 5px;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        background-color: #141414;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .note-title {
+        font-weight: bold;
+        color: #a36aff;
+        cursor: pointer;
+        margin-bottom: 0.5rem;
+      }
+
+      .note-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+        color: #ccc;
+      }
+
+      .note.active .note-content {
+        max-height: 500px; /* ajustable */
+        margin-top: 0.5rem;
+      }
+
+      footer {
+        background-color: #1a1a1a;
+        color: #888;
+        text-align: center;
+        padding: 1rem;
+        font-size: 0.9rem;
+        border-top: 1px solid #3a0c4f;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Notas del Autor</h1>
+    </header>
+    <main>
+      <div class="note">
+        <div class="note-title">Origen de Mirror</div>
+        <div class="note-content">
+          <p>La idea nació de una pesadilla persistente que tuve durante semanas. Me obsesionó tanto que supe que tenía que escribir sobre ella...</p>
+        </div>
+      </div>
+      <div class="note">
+        <div class="note-title">La creación de Veinte</div>
+        <div class="note-content">
+          <p>Veinte representa la elegancia del mal. La idea fue crear a una antagonista que fuera carismática, aterradora y profundamente simbólica...</p>
+        </div>
+      </div>
+      <div class="note">
+        <div class="note-title">Inspiraciones estéticas y musicales</div>
+        <div class="note-content">
+          <p>Lovecraft, Pérez-Reverte y David Lynch. Mezclados con música de Hans Zimmer y Chelsea Wolfe. Así se cuece el alma de esta novela...</p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      © 2025 Mirror Inc. Todos los derechos reservados.
+    </footer>
+    <script>
+      document.querySelectorAll('.note-title').forEach((title) => {
+        title.addEventListener('click', () => {
+          const note = title.parentElement;
+          note.classList.toggle('active');
+        });
+      });
+    </script>
+  </body>
+</html>
